@@ -1,67 +1,86 @@
-// =========================
-// COUNTER ANIMATION
-// =========================
+/* =========================
+   SIDEBAR MENU TOGGLE
+========================= */
 
-function animateValue(id, start, end, duration){
+const menuBtn = document.querySelector(".menu-btn");
+const sidebar = document.querySelector(".sidebar");
 
-    let obj = document.getElementById(id);
+/* OPEN & CLOSE MENU */
 
-    let range = end - start;
+menuBtn.onclick = (e) => {
 
-    let current = start;
-
-    let increment = end > start ? 1 : -1;
-
-    let stepTime = Math.abs(Math.floor(duration / range));
-
-    let timer = setInterval(function(){
-
-        current += increment;
-
-        obj.textContent = current.toLocaleString();
-
-        if(current == end){
-
-            clearInterval(timer);
-
-        }
-
-    }, stepTime);
-
-}
-
-// START COUNTERS
-
-animateValue("production", 0, 1200000, 2000);
-
-animateValue("wells", 0, 248, 2000);
-
-animateValue("employees", 0, 4820, 2000);
-
-animateValue("revenue", 0, 29500000000, 2000);
-
-// =========================
-// SIDEBAR TOGGLE
-// =========================
-
-const menuBtn = document.getElementById("menuBtn");
-
-const sidebar = document.getElementById("sidebar");
-
-menuBtn.addEventListener("click", ()=>{
+    e.stopPropagation();
 
     sidebar.classList.toggle("active");
 
+    /* SAVE MENU STATE IN HISTORY */
+
+    if(sidebar.classList.contains("active")){
+
+        history.pushState({menu:true}, "");
+
+    }
+
+};
+
+/* =========================
+   CLOSE MENU WHEN CLICKING
+   OUTSIDE THE NAVBAR
+========================= */
+
+document.addEventListener("click", (e) => {
+
+    if(
+        sidebar.classList.contains("active") &&
+        !sidebar.contains(e.target) &&
+        !menuBtn.contains(e.target)
+    ){
+
+        sidebar.classList.remove("active");
+
+    }
+
 });
 
-// =========================
-// SEARCH
-// =========================
+/* =========================
+   PREVENT MENU FROM CLOSING
+   WHEN CLICKING INSIDE
+========================= */
 
-const search = document.querySelector(".search");
+sidebar.addEventListener("click", (e) => {
 
-search.addEventListener("keyup", ()=>{
+    e.stopPropagation();
 
-    console.log("Searching:", search.value);
+});
+
+/* =========================
+   PHONE BACK BUTTON CONTROL
+========================= */
+
+window.addEventListener("popstate", () => {
+
+    if(sidebar.classList.contains("active")){
+
+        sidebar.classList.remove("active");
+
+    }
+
+});
+
+/* =========================
+   OPTIONAL:
+   CLOSE MENU AFTER CLICKING
+   A MENU LINK
+========================= */
+
+const menuLinks = document.querySelectorAll(".menu a");
+
+menuLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        sidebar.classList.remove("active");
+
+    });
 
 });
