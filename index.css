@@ -70,6 +70,21 @@ background:#1e293b;
 color:#facc15;
 }
 
+.media-showcase{
+width:100%;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.media-showcase video,
+.media-showcase img{
+width:100%;
+height:auto;
+display:block;
+object-fit:cover;
+}
+
 /* MAIN */
 .main{
 padding:100px 20px;
