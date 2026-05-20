@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>TPAO Petroleum Dashboard</title>
 
 <link rel="stylesheet" href="index.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
 <!-- HEADER -->
+
 <header class="top-header">
 
     <div class="header-left">
-        <img src="logo.png"
-        class="header-logo" alt=">
+
+        <img
+        src="https://upload.wikimedia.org/wikipedia/commons/4/4e/T%C3%BCrkiye_Petrolleri_logo.svg"
+        class="header-logo"
+        alt="TPAO Logo">
 
         <div class="company-text">
             <h2>TPAO</h2>
             <p>Petroleum Company</p>
         </div>
+
     </div>
 
-    <div class="menu-btn" id="menuBtn">☰</div>
+    <div class="menu-btn" id="menuBtn">
+        ☰
+    </div>
+
 </header>
 
 <!-- SIDEBAR -->
+
 <div class="sidebar" id="sidebar">
+
     <div class="menu">
+
         <a href="#">🏠 Home</a>
         <a href="#">⛽ Production</a>
         <a href="#">🛢️ Oil Fields</a>
@@ -37,139 +53,226 @@
         <a href="#">📊 Analytics</a>
         <a href="#">👷 Employees</a>
         <a href="#">⚙️ Settings</a>
+
     </div>
+
 </div>
 
 <!-- MAIN -->
+
 <div class="main">
 
-    <!-- HEADER -->
+    <!-- DASHBOARD HEADER -->
+
     <div class="dashboard-header">
+
         <div>
+
             <h1>TPAO Petroleum Dashboard</h1>
+
             <p class="dashboard-subtitle">
-                Advanced Oil & Gas Monitoring System
+                Professional Oil & Gas Monitoring System
             </p>
+
         </div>
 
         <input type="text" class="search" placeholder="Search...">
+
     </div>
 
     <!-- COMPANY DESCRIPTION -->
-    <div class="company-description">
+
+    <section class="company-description">
+
         <h2>About TPAO</h2>
+
         <p>
-            Turkish Petroleum Corporation (TPAO) is a leading energy company focused on oil and gas exploration,
-            production, and development across multiple regions. The company operates offshore and onshore drilling
-            projects, contributing significantly to national energy supply and global energy markets.
+            Turkish Petroleum Corporation (TPAO) is a major petroleum and energy company focused on offshore and onshore oil exploration, drilling, refining, and production systems across international regions.
         </p>
 
         <p>
-            With advanced technology, safety standards, and sustainable energy practices, TPAO continues to expand
-            its operations in Europe, the Middle East, and North Africa.
+            The company continues to expand petroleum innovation, sustainable energy development, offshore engineering, and advanced drilling technologies in multiple countries.
         </p>
-    </div>
 
-    <!-- CARDS -->
-    <div class="cards">
-        <div class="card"><h3>Total Production</h3><h2 id="production">0</h2><p>Barrels Produced</p></div>
-        <div class="card"><h3>Active Wells</h3><h2 id="wells">0</h2><p>Operational Wells</p></div>
-        <div class="card"><h3>Employees</h3><h2 id="employees">0</h2><p>Worldwide Staff</p></div>
-        <div class="card"><h3>Revenue</h3><h2 id="revenue">0</h2><p>Annual Earnings</p></div>
-    </div>
+    </section>
+
+    <!-- STATS -->
+
+    <section class="stats-section">
+
+        <div class="stat-box">
+            <h3>Total Production</h3>
+            <h2 id="production">0</h2>
+            <p>Barrels Produced</p>
+        </div>
+
+        <div class="stat-box">
+            <h3>Active Wells</h3>
+            <h2 id="wells">0</h2>
+            <p>Operational Wells</p>
+        </div>
+
+        <div class="stat-box">
+            <h3>Employees</h3>
+            <h2 id="employees">0</h2>
+            <p>Worldwide Staff</p>
+        </div>
+
+        <div class="stat-box">
+            <h3>Revenue</h3>
+            <h2 id="revenue">0</h2>
+            <p>Annual Earnings</p>
+        </div>
+
+    </section>
 
     <!-- ANALYTICS -->
-    <div class="analytics">
+
+    <section class="analytics">
 
         <div class="chart-box">
+
             <h2>Oil Production Analytics</h2>
 
             <div class="chart">
+
                 <div class="bar bar1"></div>
                 <div class="bar bar2"></div>
                 <div class="bar bar3"></div>
                 <div class="bar bar4"></div>
                 <div class="bar bar5"></div>
+
             </div>
+
         </div>
 
         <div class="activity-box">
+
             <h2>Recent Activity</h2>
+
             <p>✔️ Offshore drilling expanded</p>
-            <p>✔️ New pipeline inspection completed</p>
             <p>✔️ Libya exploration updated</p>
+            <p>✔️ Pipeline inspection completed</p>
             <p>✔️ Production increased by 8%</p>
+            <p>✔️ Safety inspection completed</p>
+
         </div>
 
-    </div>
+    </section>
 
     <!-- PROJECTS -->
-    <div class="projects">
+
+    <section class="projects">
+
         <h2>Current Projects</h2>
 
-        <table class="project-table">
-            <tr><th>Project</th><th>Location</th><th>Status</th></tr>
+        <div class="table-container">
 
-            <tr>
-                <td>Black Sea Gas Field</td>
-                <td>Turkey</td>
-                <td><span class="active">Active</span></td>
-            </tr>
+            <table class="project-table">
 
-            <section class="media-showcase">
+                <thead>
 
-    <video controls preload="metadata">
-        <source src="videos/tpao-video.mp4" type="video/mp4">
-    </video>
+                    <tr>
+                        <th>Project</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                    </tr>
 
-    <img loading="lazy" src="images/tpao-image.jpg" alt="TPAO">
+                </thead>
 
-            </section>
+                <tbody>
 
-            <tr>
-                <td>Libya Offshore Exploration</td>
-                <td>Libya</td>
-                <td><span class="running">Running</span></td>
-            </tr>
+                    <tr>
+                        <td>Black Sea Gas Field</td>
+                        <td>Turkey</td>
+                        <td><span class="status active">Active</span></td>
+                    </tr>
 
-            <tr>
-                <td>Pipeline Expansion</td>
-                <td>Ankara</td>
-                <td><span class="pending">Pending</span></td>
-            </tr>
-        </table>
-    </div>
+                    <tr>
+                        <td>Libya Offshore Exploration</td>
+                        <td>Libya</td>
+                        <td><span class="status running">Running</span></td>
+                    </tr>
 
-    <!-- IMAGE + VIDEO LINKS (NO CARDS) -->
-    <div class="media-section">
+                    <tr>
+                        <td>Pipeline Expansion</td>
+                        <td>Ankara</td>
+                        <td><span class="status pending">Pending</span></td>
+                    </tr>
 
-        <h2>Media & Updates</h2>
+                </tbody>
 
-        <div class="media-links">
-
-            <p>📷 Images:</p>
-            <a href="https://www.google.com/search?q=oil+rig+images" target="_blank">View Oil Rig Images</a>
-            <a href="https://www.google.com/search?q=offshore+platform" target="_blank">Offshore Platforms</a>
-
-            <p>🎥 Videos:</p>
-            <a href="https://www.youtube.com/results?search_query=oil+drilling+process" target="_blank">Oil Drilling Process</a>
-            <a href="https://www.youtube.com/results?search_query=petroleum+engineering" target="_blank">Petroleum Engineering</a>
+            </table>
 
         </div>
-    </div>
 
-    <!-- FOOTER (CLEAN - NO CARDS) -->
+    </section>
+
+    <!-- IMAGE SECTION -->
+
+    <section class="media-display">
+
+        <h2>Petroleum Operations Images</h2>
+
+        <div class="image-gallery">
+
+            <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1200&auto=format&fit=crop" alt="Oil Rig">
+
+            <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=1200&auto=format&fit=crop" alt="Petroleum Field">
+
+            <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1200&auto=format&fit=crop" alt="Energy Production">
+
+        </div>
+
+    </section>
+
+    <!-- VIDEO SECTION -->
+
+    <section class="video-section">
+
+        <h2>Petroleum Engineering Videos</h2>
+
+        <div class="video-container">
+
+            <iframe
+            src="https://www.youtube.com/embed/Zk11vI-7czE"
+            title="Petroleum Video"
+            allowfullscreen>
+            </iframe>
+
+            <iframe
+            src="https://www.youtube.com/embed/KM8m4jDqtmQ"
+            title="Offshore Drilling"
+            allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
     <footer class="footer">
 
         <h2>TPAO Petroleum Company</h2>
 
         <p>
-            TPAO is committed to delivering safe, efficient, and sustainable energy solutions.
-            Our operations span across exploration, drilling, production, and energy innovation.
+            TPAO continues delivering innovation in offshore drilling,
+            oil exploration, petroleum production, and sustainable energy development.
         </p>
 
+        <div class="social-links">
+
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">YouTube</a>
+
+        </div>
+
         <p class="copyright">
-            © 2026 TPAO Petroleum Company. All Rights Reserved.
+            © 2026 TPAO Petroleum Company
         </p>
 
     </footer>
@@ -179,4 +282,4 @@
 <script src="index.js"></script>
 
 </body>
-    </html>
+</html>
